@@ -1,0 +1,28 @@
+<br><br>
+<div class="container">
+  <form #signInForm="ngForm" (ngSubmit)="onSubmit(signInForm)">
+
+    <div class="form-group">
+      <label for="email_"></label>
+      <input type="text" class="form-control" required placeholder="Email" [(ngModel)]="m.email" #email="ngModel" name="email_" id="email_">
+    </div>
+    <div [hidden]="email.valid || email.pristine" class="alert alert-danger">Email is required</div>
+
+
+    <div class="form-group">
+      <label for="password_"></label>
+      <input type="password" class="form-control" required placeholder="Password" [(ngModel)]="m.password" #password="ngModel" name="password_" id="password_">
+    </div>
+    <div [hidden]="password.valid || password.pristine" class="alert alert-danger">Password is required</div>
+
+    <button type="submit" value="Sign Ip">Sign In</button>
+  </form>
+
+
+  <button routerLink="/register" >Sign Up</button>
+
+
+  <div class="alert" *ngIf="errMassage">{{errMassage}}</div>
+
+
+</div>

@@ -1,0 +1,13 @@
+//register
+{
+	"name" :"madhuwantha",
+	"email" : "test@gmail.com",
+	"password" : "12345"
+}
+
+
+//login
+{
+	"email" : "teeeee4dst@gmail.com",
+	"password" : "12345"
+}
